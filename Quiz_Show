@@ -1,0 +1,29 @@
+Questions = [
+    ["The artificial intelligence chatbot “Bard” is developed by", "1.Google", "2.Microsoft", "3.Meta", "4.Twitter", 1],
+    ["Three Gorges Dam has world's largest power station. It is located in", "1.Canada", "2.China", "3.United States", "4.Russia", 2],
+    ["Which of the following operating system is based on open-source software?", "1.Macintosh", "2.Windows 2000", "3.Windows NT", "4.Linux", 4],
+    ["By volume of water, the world's largest freshwater lake is", "1.Caspian Sea", "2.Lake Superior", "3.Lake Baikal", "4.Lake Lucerne", 3],
+    ["Chernobyl Power Plant is located in", "1.Crimea", "2.Ukraine", "3.Russia", "4.Donbas", 2],
+    ["The world's largest security-oriented organization is", "1.NATO", "2.OSCE", "3.European Union", "4.United Nations", 2],
+    ["The first Nobel Prizes were awarded in", "1.1890", "2.1896", "3.1901", "4.1907", 3],
+    ["Which bank of the United States collapsed in March 2023?", "1.Citigroup", "2.Goldman Sachs", "3.JPMorgan Chase", "4.Silicon Valley Bank", 4],
+    ["The 2026 FIFA World Cup will be held in", "1.Brazil", "2.England and France", "3.Argentina and Paraguay", "4.Canada, Mexico, United States", 4],
+    ["Which operating system is used by most of the supercomputers in the world?", "1.Windows", "2.Linux", "3.Macintosh", "4.None of these", 2],
+    ["Who is the first woman to successfully climb K2, the world's second highest mountain peak?", "1.Junko Tabei", "2.Wanda Rutkiewicz", "3.Tamae Watanabe ", "4.Chantal Mauduit", 2],
+    ["Who, in 1978, became the first person to be born in the continent of Antarctica?", "1.Emilio Palma", "2.James Weddell ", "3.Nathaniel Palmer", "4.Charles Wilkes", 1],
+    ["What is the name of the atomic bomb that was dropped on Hiroshima?", "1.Little Boy", "2.Fat Man", "3.Enola Gay", "4.Bockscar", 1]
+]
+Price = [5000,10000,20000,40000,80000,160000,320000,640000,1250000,2500000,5000000,10000000,70000000]
+
+for i in range(0,13):
+    question = Questions[i]
+    for j in range(5):
+        print(question[j])
+    choice = int(input("Select the correct option 1-4 : "))
+    if choice == question[-1]:
+        print("CORRECT\n")
+        total_winnings = Price[i]
+    else:
+        print("INCORRECT\n")
+        break
+print("Your total winnings is ", total_winnings)   
