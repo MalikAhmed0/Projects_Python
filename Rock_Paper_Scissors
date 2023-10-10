@@ -1,0 +1,43 @@
+import random
+
+def func(comp, player):
+    if(comp == player):
+        return 0
+    elif(comp == -1 and player == 0):
+        return 1
+    elif(comp == -1 and player == 1):
+        return -1
+    elif(comp == 0 and player == -1):
+        return 1
+    elif(comp == 0 and player == 1):
+        return 1
+    elif(comp == 1 and player == -1):
+        return 1
+    elif(comp == 1 and player == 0):
+        return 1
+    else:
+        return 5
+    
+tries = 5
+compwin = 0
+userwin = 0
+
+while tries>0:
+    comp = random.randrange(-1,1)
+    player = int(input("TRY YOUR LUCK AT ** Rock Paper Scissors **\n1 for Rock\n0 for Paper\n1 for Scissors\n"))
+    decision = func(comp, player)
+    if(decision == 0):
+        print("It's a TIE!!!\n")
+        userwin += 1
+        compwin += 1
+    elif decision == 1:
+        print("You have won!!!\n")
+        userwin += 1
+    elif decision == -1:
+        print("The computer has won!!!\n")
+        compwin += 1
+    else:
+        print("FUCK U!!!")
+    tries = tries-1
+
+print("Congrats! You Win the Game") if userwin>compwin else print("Sorry! You lost the game") if compwin>userwin else print("Game Tied")
