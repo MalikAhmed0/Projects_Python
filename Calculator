@@ -1,0 +1,24 @@
+# Input Validation for first number
+while True:
+    a = int(input("1st number (between 1-999) "))
+    if a > 0 and a < 1000:
+        break
+# Input validation for second number
+while True:
+    b = int(input("2nd number (between 1-999) "))
+    if b > 0 and b < 1000:
+        break
+print("1st Number:", a)
+print("2nd Number:", b)
+z = input("Possible Operations:\n+ For Addition\n- For Subtraction\n* For Multiplication\n/ For Division\n")
+if z == '+':
+    print("The value of", a, "+", b, "is:", a+b)
+elif z == '-':
+    print("The value of", a, "-", b, "is:", a-b)
+elif z == '*':
+    print("The value of", a, "*", b, "is:", a*b)
+elif z == '/':
+    print("The value of", a, "/", b, "is:", a/b)
+else:
+    print("Invalid Operator!!!")
+print("\nTHANK YOU FOR USING CALCULATOR")
