@@ -1,0 +1,45 @@
+# Encoding Pattern
+# -> If a word is 2 or less alphabets, simply reverse the word
+# -> otherwise remove last alphabet of word and add it to the beginning of the word and add a one random letter at the start and the end of each word
+
+import random
+import string
+import time
+
+def encode():
+    string1.clear()
+    data = message.split(' ')
+    for i in range(len(data)):
+        word = data[i]
+        if(len(word) < 3):
+            word = word[::-1]
+        else:
+            word = random.choice(string.ascii_letters) + word[-1] + word[0:-1] + random.choice(string.ascii_letters)
+        string1.append(word)
+
+def decode():
+    for i in range(len(string1)):
+        word = string1[i]
+        if(len(word) < 3):
+            word = word[::-1]
+        else:
+            word = word[2:-1] + word[1]
+        string2.append(word)
+
+
+choice = int(input("Press 1 for encoding\nPress 2 for decoding\n"))
+message = input("Enter your message: ")
+string1 = message.split(" ")
+string2 = []
+if(choice == 1):
+    encode()
+    encoded_message = " ".join(string1)
+    print(encoded_message)
+elif(choice == 2):
+    decode()
+    decoded_message = " ".join(string2)
+    print(decoded_message)
+else:
+    print("Invalid Input!!!")
+
+time.sleep(60)
